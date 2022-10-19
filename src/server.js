@@ -4,6 +4,8 @@ var cors = require('cors')
 
 const app = express()
 
+const port = process.env.PORT || 3333
+
 app.use(express.json())
 app.use(user)
 app.use(cors())
@@ -13,6 +15,6 @@ app.get("/registro", (req, res) => {
 })
 
 
-app.listen(3333, () => {
+app.listen(port, () => {
     console.log("Server aberto na porta 3333")
 })
