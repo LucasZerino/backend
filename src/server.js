@@ -10,6 +10,10 @@ app.use(express.json())
 app.use(user)
 app.use(cors())
 
+app.get("/", function (req, res){
+    res.send("Api para Bando de Talentos!")
+})
+
 app.get("/registro", (req, res) => {
     return res.json("Usuário registrado!")
 })
