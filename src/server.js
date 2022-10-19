@@ -20,5 +20,5 @@ app.get("/registro", (req, res) => {
 
 
 app.listen(port, () => {
-    console.log("Server aberto na porta 3333")
+    console.log(`Aplicação rodando na porta: ${port}`)
 })
