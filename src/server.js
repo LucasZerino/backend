@@ -10,8 +10,10 @@ const port = process.env.PORT || 3333
 const prisma = new PrismaClient()
 
 app.use(express.json())
-app.use(user)
-app.use(cors())
+app.use((req, res, next) => {
+    app.use(cors());
+    next();
+})
 
 app.get("/", function (req, res){
     res.send("Api para Bando de Talentos!")
