@@ -1,20 +1,14 @@
 const express = require("express")
-const user = require("./routes/user")
+var cors = require('cors')
 const {PrismaClient} = require("@prisma/client")
 const { response } = require("express")
-var cors = require('cors')
+
 
 const app = express()
+app.use(cors())
 
 const port = process.env.PORT || 3333
 const prisma = new PrismaClient()
-
-app.use(express.json())
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*")
-    app.use(cors());
-    next();
-})
 
 app.get("/", function (req, res){
     res.send("Api para Bando de Talentos!")
