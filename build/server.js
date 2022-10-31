@@ -12,6 +12,9 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use(cors());
 app.use(routes_1.routes);
+app.get("/", (req, res) => {
+    return res.json({ message: "Api funcionando!" });
+});
 app.use((err, request, response, next) => {
     if (err instanceof AppError_1.AppError) {
         return response.status(err.statusCode).json({
@@ -24,5 +27,5 @@ app.use((err, request, response, next) => {
         message: "Internal Server Error"
     });
 });
-app.listen(3333, () => console.log('Server is running on port 3333!'));
+app.listen(3333, () => console.log('Server is running!'));
 //# sourceMappingURL=server.js.map
