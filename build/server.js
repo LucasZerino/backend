@@ -24,5 +24,5 @@ app.use((err, request, response, next) => {
         message: "Internal Server Error"
     });
 });
-app.listen(3333, () => console.log('Server is running!'));
+app.listen(3333, () => console.log('Server is running on port 3333!'));
 //# sourceMappingURL=server.js.map
