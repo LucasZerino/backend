@@ -17,4 +17,12 @@ model Users{
   senha String
   email String @unique
   tenant String @default("free")
+  curriculo PDF?
+}
+
+model PDF {
+  id     Int  @id @default(autoincrement())
+  base   String  @unique
+  user   Users @relation(fields: [userId], references: [id])
+  userId Int  @unique // relation scalar field (used in the `@relation` attribute above)
 }
