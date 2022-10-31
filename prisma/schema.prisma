@@ -1,3 +1,6 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -7,16 +10,15 @@ datasource db {
   url      = "postgres://qvpvnuclbtctds:3fd9c129bb9ae8353bf19217a54e4fd8b44da88c4810684c9748275b03327487@ec2-34-227-120-79.compute-1.amazonaws.com:5432/da62k73sehgls2"
 }
 
-
 model User {
   id         Int      @id @default(autoincrement())
-  telefone      String   @unique
   name       String
   email      String   @unique
-  number     String
   address    String
   func       String
   phone      String
   pdf        String
   created_at DateTime @default(now())
+
+  @@map("candidatos")
 }
