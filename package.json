@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node-dev --exit-child --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "dev": "ts-node-dev --exit-child --transpile-only --respawn --ignore-watch node_modules src/server.ts"
   },
   "keywords": [],
