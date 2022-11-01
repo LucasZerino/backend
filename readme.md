@@ -99,7 +99,7 @@ Tarefas da etapa:
 - Após estes campos a o candidato, deve informar a função pretendida(usar um campo select com no mínimo três funções)
 
 ### Envio dos dados
-- Enviar os dados (como apresentados acima) via POST para [BackTalentosAPI](https://backendtalentos.herokuapp.com/users)
+- Enviar os dados (como apresentados acima) via POST para [http://54.232.20.77:3333/users](http://54.232.20.77:3333/users)
 - Trate as validações da Api e retorne para o usuário se ele já está cadastrado ou outro possível erro!
 - O PDF enviado deve ser tratado no frontEnd e transformado para base64, só após isso o formulário deve ser enviado, caso necessário deve-se usar um loading enquanto converte o PDF em base64!
 
